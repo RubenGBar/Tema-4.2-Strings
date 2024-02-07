@@ -7,6 +7,7 @@ public class Ejercicio02 {
 	// Creo un objeto de la clase Scanner 
 	Scanner sc = new Scanner(System.in);
 	
+	
 	// Cierro el Scanner
 	sc.close();
 	}
