@@ -6,10 +6,6 @@ public class Ejercicio01 {
 	public static void main(String[] args) {
 		// Creo un objeto de la clase Scanner
 		Scanner sc = new Scanner(System.in);
-		// Variable para guardar el número de caractéres de la primera cadena
-		int caracteresCadena1 = 0;
-		// Variable para guardar el número de caractéres de la segunda cadena
-		int caracteresCadena2 = 0;
 		// Variable para guardra la primera cadena introducida por teclado
 		String cadena1 = "";
 		// Variable para guardra la segunda cadena introducida por teclado
@@ -23,6 +19,25 @@ public class Ejercicio01 {
 		System.out.println("Introduzca una frase: ");
 		// Leo el valor de cadena2
 		cadena2 = sc.nextLine();
+
+		// Llamo a la función cuentaCaracteres para que muestre que cadena es más corta
+		cuentaCaracteres(cadena1, cadena2);
+		
+		// Cierro el Scanner
+		sc.close();
+	}
+
+	/**
+	 * Función con la que cuento los caractéres de cada cadena y
+	 * muestro por pantalla cual es más corta
+	 * @param cadena1
+	 * @param cadena2
+	 */
+	public static void cuentaCaracteres(String cadena1, String cadena2) {
+		// Variable para guardar el número de caractéres de la primera cadena
+		int caracteresCadena1 = 0;
+		// Variable para guardar el número de caractéres de la segunda cadena
+		int caracteresCadena2 = 0;
 
 		// Bucle para contar el número de caractéres de la primera cadena
 		for(int i = 1; i <= cadena1.length(); i++) {
@@ -41,9 +56,6 @@ public class Ejercicio01 {
 		}else {
 			System.out.println("La segunda frase es más corta ya que cuenta con: " + caracteresCadena2 + " caractéres");
 		}
-		
-		// Cierro el Scanner
-		sc.close();
 	}
 
 }
