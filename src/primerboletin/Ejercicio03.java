@@ -25,7 +25,11 @@ public class Ejercicio03 {
 		// Cierro el Scanner
 		sc.close();
 	}
-
+	/**
+	 * Función para contar los espacios de una cadena
+	 * @param frase Cadena a contar espacios
+	 * @return Número de espacios de la cadena
+	 */
 	public static int cuentaEspacios(String frase) {
 		// Variable que devuelvo como valor de la función 
 		int numeroEspacios = 0;
