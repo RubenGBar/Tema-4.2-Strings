@@ -48,7 +48,6 @@ public class Ejercicio02 {
 
 	} while (acertado);
 	
-	
 	// Cierro el Scanner
 	sc.close();
 }
