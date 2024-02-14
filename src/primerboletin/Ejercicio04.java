@@ -21,7 +21,6 @@ public class Ejercicio04 {
 		// Cierro el Scanner
 		sc.close();
 	}
-
 	/**
 	 * Función que muestra las palbras de la variable de forma ordenada
 	 * @param frase Frase introducida por teclado a ordenar sus palabras
