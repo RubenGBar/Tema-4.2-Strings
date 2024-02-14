@@ -10,6 +10,8 @@ public class Ejercicio07 {
 		String palabra = "";
 		// Variable para guardar la frase introducida por teclado
 		String frase = "";
+		// Variable para guardar el valor devuelto al llamar la función cuentaPalabrasEnFrase
+		int contadorPalabra = 0;
 		
 		// Pido que introduzca una palabra
 		System.out.println("Introduzca una palabra");
@@ -20,7 +22,11 @@ public class Ejercicio07 {
 		// Guardo el valor introducido por teclado en frase
 		frase = sc.nextLine();
 		
+		// Llamo a la funicón cuentaPalabrasEnFrase y lo  guardo en contadorPalabra
+		contadorPalabra = cuentaPalabrasEnFrase(palabra, frase);
 		
+		// Muestro las veces que ha aparecido la palabra
+		System.out.println("La palabra " + palabra + " aparece en la frase " + contadorPalabra + " vez/veces");
 		
 		// Cierro el Scanner
 		sc.close();
@@ -36,8 +42,16 @@ public class Ejercicio07 {
 	public static int cuentaPalabrasEnFrase(String palabra, String frase) {
 		// Variable para guardar el valor que devuelve la función
 		int vecesAparecePalabra = 0;
+		// Array para dividir la frase en palabras
+		String palabras[] = frase.split(" ");
 		
-		
+		// Bucle para comparar el array y la palabra deseada
+		for(int i = 0; i < palabras.length; i++) {
+			// Compruebo que la palabra se encunetre en el array y aumento vecesAparecePalabra en 1
+			if(palabras[i].equalsIgnoreCase(palabra)) {
+				vecesAparecePalabra += 1;
+			}
+		}
 		
 		// Devuelvo vecesAparecePalabra como valor de la función
 		return vecesAparecePalabra;
