@@ -7,7 +7,7 @@ public class Ejercicio02 {
 	// Creo un objeto de la clase Scanner 
 	Scanner sc = new Scanner(System.in);
 	// Variable para guardar la contraseña a guardar
-	String contrasenia = "Infinito";
+	String contrasenia = "";
 	// Variable para guardar la respuesta del usuario
 	String respuesta = "";
 	// Variable par ir mostrando por pantalla con asteriscos
@@ -15,6 +15,11 @@ public class Ejercicio02 {
 	// Variable para controlar el bucle do while
 	boolean acertado = true;
 
+	// Pido que introduzca la contraseña
+	System.out.println("Introduzca una contraseña");
+	// Guardo el valor introducido por teclado en contrasenia
+	contrasenia = sc.nextLine();
+	
 	// Bucle para repetir el programa hasta que la palabra introducida sea igual a la contraseña
 	do {
 		/* 
@@ -39,7 +44,7 @@ public class Ejercicio02 {
 		}
 
 		// Muestro la respuesta con los asteriscos
-		System.out.println("\nContraseña:\n" + respuestaConstruida + "\n");
+		System.out.println("Contraseña:\n" + respuestaConstruida + "\n");
 
 		// Cuando las palabras sean iguales termino el bucle
 		if (respuesta.equals(contrasenia)) {
@@ -47,7 +52,8 @@ public class Ejercicio02 {
 		}
 
 	} while (acertado);
-	
+	// Muestro un mensaje en el que indico que ha acertado
+	System.out.println("ENHORABUENA HAS ACERTADO!!");
 	
 	// Cierro el Scanner
 	sc.close();
