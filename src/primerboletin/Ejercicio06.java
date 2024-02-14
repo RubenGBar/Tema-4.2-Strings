@@ -32,7 +32,8 @@ public class Ejercicio06 {
 		}
 		// Muestro la frase con tdas las palabras sin fin
 		System.out.println("Las palabras construida como una frase es así:\n" + frase);
-		
+		// Cierro el Scanner
+		sc.close();
 	}
 
 }
