@@ -37,7 +37,7 @@ public class Ejercicio04 {
 		System.out.println("Las palabras en orden son: ");
 		// Imrpimo el Array
 		for(int i = 0; i < palabras.length; i++) {
-			System.out.println(palabras[i]);
+			System.out.print(palabras[i] + " ");
 		}
 	}
 	
