@@ -38,14 +38,18 @@ public class Ejercicio08 {
 	public static boolean compruebaPalindromo(String palindromo) {
 		// Variable que devuelvo como valor de la función 
 		boolean esPalindromo = true;
+		// Variable para no modificar la introducida por el usuario
+		String frasePalindroma = "";
 		
 		// Elimino los espacios de la cadena
-		palindromo = palindromo.trim().replace(" ", "");
+		frasePalindroma = palindromo.trim().replace(" ", "");
+		// Cambio todos los caracteres a minúsculas para por si introducen caracteres en mayúsculas
+		frasePalindroma = frasePalindroma.toLowerCase();
 		
 		// Bucle para comprobar que la cadena sea palíndroma
-		for(int i = 0; i < palindromo.length() && esPalindromo; i++) {
+		for(int i = 0; i < frasePalindroma.length()/2 && esPalindromo; i++) {
 			// En el momento en que los caractéres de la cadena no coincidan esPalindromo será false y terminará de comprobar
-			if(palindromo.charAt(i) != palindromo.charAt(palindromo.length() - i - 1)) {
+			if(frasePalindroma.charAt(i) != frasePalindroma.charAt(frasePalindroma.length() - i - 1)) {
 				esPalindromo = false;
 			}
 		}
