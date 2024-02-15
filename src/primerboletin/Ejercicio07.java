@@ -13,14 +13,14 @@ public class Ejercicio07 {
 		// Variable para guardar el valor devuelto al llamar la función cuentaPalabrasEnFrase
 		int contadorPalabra = 0;
 		
-		// Pido que introduzca una palabra
-		System.out.println("Introduzca una palabra");
-		// Guardo el valor introducido por teclado en palabra
-		palabra = sc.nextLine();
 		// Pido que introduzca una frase
 		System.out.println("Introduzca una frase");
 		// Guardo el valor introducido por teclado en frase
 		frase = sc.nextLine();
+		// Pido que introduzca una palabra
+		System.out.println("Introduzca una palabra a buscar");
+		// Guardo el valor introducido por teclado en palabra
+		palabra = sc.nextLine();
 		
 		// Llamo a la funicón cuentaPalabrasEnFrase y lo  guardo en contadorPalabra
 		contadorPalabra = cuentaPalabrasEnFrase(palabra, frase);
