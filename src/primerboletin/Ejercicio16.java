@@ -81,7 +81,7 @@ public class Ejercicio16 {
 		// Creo un objeto de la clase random
 		Random rand = new Random();
 		// Array en el que guardo los caracteres de la cadena
-		char[] palabraArray = new char[copiaPalabra.length()];
+		char[] palabraArray = copiaPalabra.toCharArray();
 		// Array en el que guardo los números aleatorios ya generados
 		int[] numerosGenerados = new int[copiaPalabra.length()];
 		// Variable en la que voy construyendo el anagrama aleatorio
@@ -91,19 +91,11 @@ public class Ejercicio16 {
 		// Variable para guardar los números aleatorios generados
 		int numAleatorio = 0;
 
-		// Bucle en el que asigno a las posiciones de palabraArray los caracteres de la
-		// palabra
-		for (int i = 0; i < copiaPalabra.length(); i++) {
-			palabraArray[i] = copiaPalabra.charAt(i);
-		}
-
 		// Bucle para construir el anagrama aleatorio
 		while (cont < copiaPalabra.length()) {
-			// Genero un número aleatorio que no sea más grande que el número de caracteres
-			// de la palabra
+			// Genero un número aleatorio que no sea más grande que el número de caracteres de la palabra
 			numAleatorio = rand.nextInt(0, copiaPalabra.length() - 1);
-			// Llamo a la función busqueda para comprobar que el número aleatorio no sea el
-			// mismo y entonces
+			// Llamo a la función busqueda para comprobar que el número aleatorio no sea el mismo y entonces
 			if (busqueda(numerosGenerados, numAleatorio) < 0) {
 				// Construyo el anagrama
 				palabraConstruida += palabraArray[numAleatorio];
