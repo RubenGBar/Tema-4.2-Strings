@@ -9,6 +9,10 @@ public class Ejercicio14 {
 		// Variable para guardar la frase introducida por teclado y contar sus letras
 		String frase = "";
 		
+		// Pido que introduzca una cadena
+		System.out.println("Introduzca una frase: ");
+		// Guardo lo introducido por teclado en frase
+		frase = sc.nextLine();
 		
 		// Cierro el Scanner
 		sc.close();
