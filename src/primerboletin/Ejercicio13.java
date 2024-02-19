@@ -54,23 +54,17 @@ public class Ejercicio13 {
 		int cont = 0;
 		
 		// Elimino los espacios
-		copiaCadena1.replace(" ", "");
+		copiaCadena1.replace(" ", "").toLowerCase();
 		// Elimino los espacios
-		copiaCadena2.replace(" ", "");	
+		copiaCadena2.replace(" ", "").toLowerCase();
+		// Convierto los caracteres a minúsculas
+		copiaCadena1 = copiaCadena1.toLowerCase();
+		// Convierto los caracteres a minúsculas
+		copiaCadena2 = copiaCadena2.toLowerCase();
 		// Array para guardar las cadenas en arrays de char
-		char[] cadena1AChar = new char[copiaCadena1.length()];
+		char[] cadena1AChar = copiaCadena1.toCharArray();
 		// Array para guardar las cadenas en arrays de char
-		char[] cadena2AChar = new char[copiaCadena2.length()];
-		
-		// Bucle para convertir las cadenas en Arrays sin importar que sea mayúsculas o minúsculas
-		for(int i = 0; i < copiaCadena1.length(); i++) {
-			cadena1AChar[i] = copiaCadena1.toLowerCase().charAt(i);
-		}
-		// Bucle para convertir las cadenas en Arrays sin importar que sea mayúsculas o minúsculas
-		for (int i = 0; i < copiaCadena2.length(); i++) {
-			cadena2AChar[i] = copiaCadena2.toLowerCase().charAt(i);
-		}
-		
+		char[] cadena2AChar = copiaCadena2.toCharArray();
 		// Ordeno los Arrays
 		Arrays.sort(cadena1AChar);
 		// Ordeno los Arrays
