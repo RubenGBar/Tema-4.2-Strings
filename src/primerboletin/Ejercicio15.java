@@ -22,6 +22,7 @@ public class Ejercicio15 {
 			palabra = sc.nextLine();
 		} while (palabra.equals(""));
 		
+		
 		// Convierto los caracteres de la palabra a minúsculas
 		palabra = palabra.toLowerCase();
 		// Genero el anagrama aleatorio a adivinar
