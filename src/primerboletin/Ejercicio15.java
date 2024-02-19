@@ -28,36 +28,16 @@ public class Ejercicio15 {
 		palabra = palabra.toLowerCase();
 		// Genero el anagrama aleatorio a adivinar
 		palabraAleatoria = anagramaAleatorio(palabra);
-		// Genero otro anagrama y lo muestro como pista
+		// Genero otro anagrama como pista
 		pista = anagramaAleatorio(palabra);
-		System.out.println("Adivine el anagrama aleatorio generado.\nPista: " + pista);
 		
 		// Bucle para repetir el programa hasta que la palabra introducida sea igual al anagrama aleatorio
 		do {
-			/*
-			 * Vuevlo a iniciar la variable respuestaConstruida a cadena vacía para poder
-			 * volver a construir una cadena con la nueva respuesta
-			 */
-			respuestaConstruida = "";
-			// Pido que introduzca una palabra
-			System.out.println("Introduzca una palabra para acertar el anagrama: ");
-			// Guardo el valor introducido del teclado en respuesta
-			intentoPalabra = sc.next();
-
-			// Bucle for para ir construyendo la respuesta con los asteriscos y caracteres acertados
-			for (int i = 0; i < palabra.length(); i++) {
-				// Añado el caracter cuando sean iguales y la palabra introducida menor que la i
-				if (i < intentoPalabra.length() && intentoPalabra.charAt(i) == palabraAleatoria.charAt(i)) {
-					respuestaConstruida += intentoPalabra.charAt(i);
-					// En otro caso añado asteriscos
-				} else {
-					respuestaConstruida += "*";
-				}
-			}
-
-			// Muestro la respuesta con los asteriscos
-			System.out.println("Contraseña:\n" + respuestaConstruida + "\n");
-
+			// Pido que introduzca una frase y muestro la pista
+			System.out.println("Adivine el anagrama aleatorio generado.\nPista: " + pista);
+			// Leo el valor introducido por teclado en intentoPalabra
+			intentoPalabra = sc.nextLine();
+			
 		} while (intentoPalabra.equals(palabraAleatoria));
 		// Muestro un mensaje en el que indico que ha acertado
 		System.out.println("ENHORABUENA HAS ACERTADO!!");
