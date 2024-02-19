@@ -15,8 +15,6 @@ public class Ejercicio15 {
 		String pista = "";
 		// Variable en la que guardo el intento de adivinar el anagrama
 		String intentoPalabra = "";
-		// Variable en la que construyo la palabra con los caracteres acertados y asteriscos
-		String respuestaConstruida = "";
 
 		// Bucle para que no se pueda introducir la cadena vacía
 		do {
@@ -57,7 +55,7 @@ public class Ejercicio15 {
 		// Creo un objeto de la clase random
 		Random rand = new Random();
 		// Array en el que guardo los caracteres de la cadena
-		char[] palabraArray = new char[copiaPalabra.length()];
+		char[] palabraArray = copiaPalabra.toCharArray();
 		// Array en el que guardo los números aleatorios ya generados
 		int[] numerosGenerados = new int[copiaPalabra.length()];
 		// Variable en la que voy construyendo el anagrama aleatorio
@@ -66,11 +64,6 @@ public class Ejercicio15 {
 		int cont = 0;
 		// Variable para guardar los números aleatorios generados
 		int numAleatorio = 0;
-		
-		// Bucle en el  que asigno a las posiciones de palabraArray los caracteres de la palabra
-		for(int i = 0; i < copiaPalabra.length(); i++) {
-			palabraArray[i] = copiaPalabra.charAt(i);
-		}
 		
 		// Bucle para construir el anagrama aleatorio
 		while(cont < copiaPalabra.length()) {
