@@ -76,7 +76,7 @@ public class Ejercicio13 {
 		// Ordeno los Arrays
 		Arrays.sort(cadena2AChar);
 		// Bucle para comprobar que las frases sean anagramas
-		while(esAnagrama) {
+		while(esAnagrama && cont < cadena1AChar.length || cont < cadena2AChar.length) {
 			// En el momento en que un caracter sea distinto de otro el bucle terminará
 			if (cadena1AChar[cont] != cadena2AChar[cont]) {
 				esAnagrama = false;
