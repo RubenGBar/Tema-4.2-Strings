@@ -1,5 +1,6 @@
 package primerboletin;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -33,8 +34,7 @@ public class Ejercicio16 {
 		pista = anagramaAleatorio(palabra);
 		System.out.println("Adivine el anagrama aleatorio generado.\nPista: " + pista);
 
-		// Bucle para repetir el programa hasta que la palabra introducida sea igual al
-		// anagrama aleatorio
+		// Bucle para repetir el programa hasta que la palabra introducida sea igual al anagrama aleatorio
 		do {
 			/*
 			 * Vuevlo a iniciar la variable respuestaConstruida a cadena vacía para poder
@@ -57,11 +57,10 @@ public class Ejercicio16 {
 					respuestaConstruida += "*";
 				}
 			}
-
 			// Muestro la respuesta con los asteriscos
-			System.out.println("Contraseña:\n" + respuestaConstruida + "\n");
+			System.out.println("Anagrama:\n" + respuestaConstruida + "\n");
 
-		} while (intentoPalabra.equals(palabraAleatoria));
+		} while (!intentoPalabra.equals(palabraAleatoria));
 		// Muestro un mensaje en el que indico que ha acertado
 		System.out.println("ENHORABUENA HAS ACERTADO!!");
 
@@ -91,18 +90,25 @@ public class Ejercicio16 {
 		// Variable para guardar los números aleatorios generados
 		int numAleatorio = 0;
 
+		/*
+		 * Relleno la tabla que guarda los núemros aleatorios ya generados con un número fuera de las posiciones
+		 * de los caracteres de la plabara para no tener problema al comparar el Array con el nuevo número 
+		 * aleatorio generado
+		 * */
+		Arrays.fill(numerosGenerados, -1);
+		
 		// Bucle para construir el anagrama aleatorio
 		while (cont < copiaPalabra.length()) {
 			// Genero un número aleatorio que no sea más grande que el número de caracteres de la palabra
-			numAleatorio = rand.nextInt(0, copiaPalabra.length() - 1);
+			numAleatorio = rand.nextInt(0, copiaPalabra.length());
 			// Llamo a la función busqueda para comprobar que el número aleatorio no sea el mismo y entonces
 			if (busqueda(numerosGenerados, numAleatorio) < 0) {
 				// Construyo el anagrama
 				palabraConstruida += palabraArray[numAleatorio];
-				// Aumento el contador
-				cont++;
 				// Guardo el número aleatorio en el array de números generados
 				numerosGenerados[cont] = numAleatorio;
+				// Aumento el contador
+				cont++;
 			}
 		}
 
