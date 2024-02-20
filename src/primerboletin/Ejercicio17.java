@@ -26,6 +26,11 @@ public class Ejercicio17 {
 		sc.close();
 	}
 	
+	/**
+	 * Función que elimina los comentarios en una cadena
+	 * @param frase Frase a quitar los comentarios
+	 * @return Devuelvo la frase sin comentarios
+	 */
 	public static String quitaComentarios(String frase) {
 		// Variable para no modificar la frase recibida
 		String copiaFrase = frase;
