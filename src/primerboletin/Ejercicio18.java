@@ -30,6 +30,12 @@ public class Ejercicio18 {
 		sc.close();
 	}
 	
+	/**
+	 * Función que convierte un título y una cadena en un código básico de HTML
+	 * @param titulo El título del código HTML
+	 * @param contenido El contenido del código HTML
+	 * @return Devuelve un código HTML
+	 */
 	public static String hacerHTML(String titulo, String contenido) {
 		// Variable en la que guardo el códgio HTML
 		String HTML = "";
